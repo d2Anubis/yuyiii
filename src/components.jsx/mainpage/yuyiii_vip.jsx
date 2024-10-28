@@ -17,7 +17,7 @@ const VIP = () => {
         ></iframe>
 
         {/* Overlay for Thumbnail */}
-        <div className="absolute top-20 left-20 bg-black bg-opacity-50 text-white text-sm font-bold p-2 rounded">
+        <div className="absolute top-10 left-10 bg-black bg-opacity-50 text-white text-sm font-bold p-2 rounded">
           Meet Sumedh! AKA the BirdMan
         </div>
 
