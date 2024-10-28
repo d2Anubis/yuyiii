@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            {/* <img className="h-8" src="public/logo512.png" alt="Logo" /> */}
+            Yuyiii Logo Here
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
@@ -55,14 +55,21 @@ const Navbar = () => {
       </div>
       <div className={`${isOpen ? 'block' : 'hidden'} md:hidden`} id="mobile-menu">
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <a href="#" className="text-gray-500 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Home</a>
-          <a href="#" className="text-gray-500 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">About</a>
-          <a href="#" className="text-gray-500 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+          <a href="#" className="text-gray-500 hover:text-pink-400 block px-3 py-2 rounded-md text-base font-medium">Stays</a>
+          <a href="#" className="text-gray-500 hover:text-pink-400 block px-3 py-2 rounded-md text-base font-medium">Destination</a>
+          <a href="#" className="text-gray-500 hover:text-pink-400 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+          <a href="#" className="text-gray-500 hover:text-pink-400 block px-3 py-2 rounded-md text-base font-medium">About</a>
           <a
             href="#"
-            className="text-white bg-blue-500 hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium"
+            className="text-black bg-gray-200 hover:bg-pink-400 block px-3 py-2 rounded-md text-base font-medium"
           >
             Sign Up
+          </a>
+          <a
+            href="#"
+            className="text-white bg-gray-700 hover:bg-pink-400 block px-3 py-2 rounded-md text-base font-medium"
+          >
+            Register
           </a>
         </div>
       </div>
