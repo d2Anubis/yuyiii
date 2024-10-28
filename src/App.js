@@ -8,10 +8,8 @@ import VIP from './components.jsx/mainpage/yuyiii_vip';
 function App() {
   return (
     <ThemeProvider>
-    <div className="App">
-      
+    <div className="App">   
       <Navbar />
-      // <VIP/>
       <WhatsAppIcon/>
     </div></ThemeProvider>
   );
