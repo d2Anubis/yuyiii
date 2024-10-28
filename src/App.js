@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       
       <Navbar />
-      <VIP/>
+      // <VIP/>
       <WhatsAppIcon/>
     </div></ThemeProvider>
   );
