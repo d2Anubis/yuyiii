@@ -50,12 +50,12 @@ const Hero = () => {
       className="flex min-h-screen items-center justify-center bg-cover bg-center relative" 
       style={{ backgroundImage: `url(${heroImage})` }}
     >
-      <div className="absolute top-20 right-10 flex items-center text-white cursor-pointer">
+      <div className="absolute top-5 right-5 md:top-20 md:right-10 flex items-center text-white cursor-pointer p-2 bg-opacity-70 bg-gray-800 rounded">
         <i className="fas fa-map-marker-alt mr-2"></i> {/* Location Icon */}
-        <span>Sultan Bhatery, Kerala</span>
+        <span className="text-sm md:text-base">Sultan Bhatery, Kerala</span>
       </div>
-      <div className="w-max">
-        <h1 className="text-5xl text-white font-bold">
+      <div className="text-center">
+        <h1 className="text-4xl md:text-5xl text-white font-bold p-4 md:p-0">
           {displayText}
           <span className="inline-block">|</span> {/* Static Cursor */}
         </h1>
