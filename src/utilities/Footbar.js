@@ -2,45 +2,26 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { FaInstagram } from "react-icons/fa";
+import dummy_person from "../assets/dummy_person.png"; // Direct import
 
 const ResponsiveCarousel = () => {
-  // Custom Previous Arrow Component
+  // Custom Arrow Components with Circle Styling
   const PrevArrow = ({ onClick }) => (
     <div
-      className="absolute top-1/2 left-2 transform -translate-y-1/2 p-2 bg-gray-800 bg-opacity-75 rounded-full cursor-pointer z-10"
+      className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-500 bg-opacity-75 rounded-full cursor-pointer z-10 w-10 h-10 flex items-center justify-center" // Adjusted size
       onClick={onClick}
     >
-      <svg
-        className="w-6 h-6 text-white"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-      >
-        <path
-          fillRule="evenodd"
-          d="M12.293 16.293a1 1 0 010-1.414L15.586 12H5a1 1 0 110-2h10.586l-3.293-2.879a1 1 0 111.414-1.414l5 4.5a1 1 0 010 1.414l-5 4.5a1 1 0 01-1.414 0z"
-          clipRule="evenodd"
-        />
-      </svg>
+      <span className="text-white text-lg font-bold">&lt;</span>
     </div>
   );
 
-  // Custom Next Arrow Component
   const NextArrow = ({ onClick }) => (
     <div
-      className="absolute top-1/2 right-2 transform -translate-y-1/2 p-2 bg-gray-800 bg-opacity-75 rounded-full cursor-pointer z-10"
+      className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-500 bg-opacity-75 rounded-full cursor-pointer z-10 w-10 h-10 flex items-center justify-center" // Adjusted size
       onClick={onClick}
     >
-      <svg
-        className="w-6 h-6 text-white"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-      >
-        <path
-          fillRule="evenodd"
-          d="M7.707 3.707a1 1 0 010 1.414L4.414 8H15a1 1 0 110 2H4.414l3.293 2.879a1 1 0 11-1.414 1.414l-5-4.5a1 1 0 010-1.414l5-4.5a1 1 0 011.414 0z"
-          clipRule="evenodd"
-        />
-      </svg>
+      <span className="text-white text-lg font-bold">&gt;</span>
     </div>
   );
 
@@ -60,28 +41,61 @@ const ResponsiveCarousel = () => {
     ]
   };
 
-  const images = [
-    "/logo512.png",
-    "/logo512.png",
-    "/logo512.png",
-    "/logo512.png",
-    "/logo512.png",
-    "/logo512.png"
+  const testimonials = [
+    { name: "Suzana", text: "Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.", image: dummy_person },
+    { name: "Lívia", text: "Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.", image: dummy_person },
+    { name: "Kátia", text: "Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.", image: dummy_person },
+    { name: "Matheus", text: "Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.", image: dummy_person }
   ];
 
   return (
     <div className="container mx-auto py-8">
+      <h2 className="underline text-center text-sm font-semibold mb-6">
+        What our users say about us?
+      </h2>
       <Slider {...settings}>
-        {images.map((image, index) => (
-          <div key={index} className="px-2">
-            <img
-              src={image}
-              alt={`Carousel ${index + 1}`}
-              className="w-full h-48 object-cover rounded-lg shadow-lg"
-            />
+        {testimonials.map((testimonial, index) => (
+          <div key={index} className="px-4">
+            <div className="bg-white border border-gray-900 rounded-lg shadow-md overflow-hidden flex flex-col items-center relative">
+              
+              {/* Text Section */}
+              <div className="bg-white p-6 pb-16 text-center text-gray-700 w-full flex-grow">
+                <blockquote className="italic">“{testimonial.text}”</blockquote>
+              </div>
+              
+              {/* Profile Image */}
+              <div className="relative -mt-12">
+                <img
+                  src={testimonial.image}
+                  alt={`${testimonial.name}'s profile`}
+                  className="w-16 h-16 rounded-full border-4 border-white shadow-lg mx-auto"
+                  style={{ position: 'relative', top: '-10px' }}
+                />
+              </div>
+              
+              {/* Name + Instagram Section */}
+              <div className="bg-gray-900 w-full py-8 px-4 flex justify-between items-center text-white -mt-8">
+                <p className="font-semibold text-sm">{testimonial.name.toUpperCase()}</p> {/* Smaller text size */}
+                <FaInstagram className="text-white" />
+              </div>
+            </div>
           </div>
         ))}
       </Slider>
+
+      {/* Custom CSS for larger dots */}
+      <style jsx global>{`
+        .slick-dots {
+          margin-bottom: -10px; /* Adds space between the cards and dots */
+        }
+        .slick-dots li button:before {
+          font-size: 16px; /* Make the dots larger */
+          color: #444;     /* Dot color */
+        }
+        .slick-dots li.slick-active button:before {
+          color: #000;     /* Active dot color */
+        }
+      `}</style>
     </div>
   );
 };
