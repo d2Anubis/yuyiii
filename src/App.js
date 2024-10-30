@@ -16,6 +16,9 @@ import Footer from './utilities/Footer';
 import Links from './utilities/Links';
 import Partners from './utilities/Partners';
 // import ResponsiveCarousel from './utilities/Footbar';
+import ResponsiveTextImageCollage from './components/mainpage/collage'
+import ImageCarousel from './components/mainpage/ImageCarousel'
+import FooterSocials from './utilities/Links';
 
 function App() {
   return (
@@ -23,6 +26,9 @@ function App() {
     <div className="App">
       <Navbar />
       <Hero />
+      {/* <ImageCarousel/> */}
+      {/* <VIP/> */}
+      {/* <ResponsiveTextImageCollage /> */}
       <ResponsiveCarousel/>
       
       <Stats/>
@@ -30,9 +36,8 @@ function App() {
       {/* <Links/>
       <Footer/> */}
 
-      {/* <VIP/> */}
-
-      <WhatsAppIcon/>
+<FooterSocials/>
+      {/* <WhatsAppIcon/> */}
       {/* <ImageTabs/> */}
       {/* <ResponsiveCarousel/> */}
       {/* <TabNavigation /> */}

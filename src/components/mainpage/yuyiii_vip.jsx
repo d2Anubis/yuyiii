@@ -38,6 +38,10 @@ const VIP = () => {
   }, [videoId]);
 
   return (
+    <div>
+    {/* <div className="text-sm font-bold text-left p-4">
+          Yuyiii VIP
+    </div> */}
     <div className="flex flex-col items-center">
       {/* Video Embed */}
       <div className="relative w-full">
@@ -53,18 +57,22 @@ const VIP = () => {
 
         {/* Overlay for Thumbnail */}
         {!isPlaying && (
-          <>
-            <div className="absolute top-10 left-10 bg-black bg-opacity-50 text-white text-sm font-bold p-2 rounded">
-              Meet Sumedh! AKA the BirdMan
-            </div>
-
-            <div className="absolute bottom-5 right-5 bg-black bg-opacity-50 text-white text-sm font-bold p-2 rounded">
-              Experience the comfort of local companionship
-            </div>
-          </>
+          <div className="absolute top-10 left-10 bg-black bg-opacity-50 text-white text-sm font-bold p-2 rounded">
+            Meet Sumedh! AKA the BirdMan
+          </div>
         )}
       </div>
-    </div>
+
+      {/* Text Below the Video */}
+      <div className="bg-black w-full flex flex-col items-end p-4">
+        <div className="text-white text-sm font-bold text-right">
+          Everyone Needs a Friend!
+        </div>
+        <div className="text-white text-sm text-right">
+          Experience the comfort of local companionship
+        </div>
+      </div>
+    </div></div>
   );
 };
 
