@@ -32,8 +32,8 @@ function App() {
 
       {/* <VIP/> */}
 
-      {/* <WhatsAppIcon/>
-      <ImageTabs/> */}
+      <WhatsAppIcon/>
+      {/* <ImageTabs/> */}
       {/* <ResponsiveCarousel/> */}
       {/* <TabNavigation /> */}
       {/* <Gallery /> */}
