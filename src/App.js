@@ -37,7 +37,7 @@ function App() {
       <Footer/> */}
 
 <FooterSocials/>
-      {/* <WhatsAppIcon/> */}
+      <WhatsAppIcon/>
       {/* <ImageTabs/> */}
       {/* <ResponsiveCarousel/> */}
       {/* <TabNavigation /> */}
